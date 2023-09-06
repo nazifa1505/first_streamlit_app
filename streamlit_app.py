@@ -33,6 +33,8 @@ def get_fruityvice_data(this_fruit_choice):
   
 
 streamlit.header("Fruityvice Fruit Advice!")
+add_my_fruit = streamlit.text_input('What fruit would you like to add?', 'jackfruit')
+my_cur.execute("insert into fruit_load_list values ('from streamlit')") 
 try:
   fruit_choice = streamlit.text_input('What fruit would you like information about?')
   if not fruit_choice:
@@ -57,5 +59,4 @@ try:
     
       
   
-add_my_fruit = streamlit.text_input('What fruit would you like to add?', 'jackfruit')
-my_cur.execute("insert into fruit_load_list values ('from streamlit')") 
+
